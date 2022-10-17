@@ -8,18 +8,13 @@ module.exports = {
     },
     sidebar: [
       {
-        text: 'vue',
-        collapsible: true,
-        items: []
-      },
-      {
         text: 'ts',
         collapsible: true,
         items: [
           { text: 'ts操作基础手册', link: '/ts/TS操作基础手册' }
         ]
-      }
+      },
     ],
   },
-  description: 'Just playing around.'
+  description: 'blog.'
 }
