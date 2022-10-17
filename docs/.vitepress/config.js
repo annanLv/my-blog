@@ -1,6 +1,6 @@
 module.exports = {
   title: 'nan',
-  base: './',
+  base: "/my-blog/",
   themeConfig: {
     algolia: {
       apiKey: 'your_api_key',
