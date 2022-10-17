@@ -9,10 +9,7 @@ module.exports = {
       {
         text: 'vue',
         collapsible: true,
-        items: [
-          { text: 'Introduction', link: '/introduction' },
-          { text: 'test', link: '/test' },
-        ]
+        items: []
       },
       {
         text: 'ts',
