@@ -22,7 +22,7 @@ jobs: # 任务
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # 自己仓库配置的令牌
         with:
           branch: gh-pages # 将打包后的目录部署在gh-pages分支
-          folder: dist # 打包后生成的目录地址
+          folder: docs/.vitepress/dist # 打包后生成的目录地址
 
 #      #以下配置同步代码到gitee仓库并自动部署
 #      - name: Sync to Gitee
