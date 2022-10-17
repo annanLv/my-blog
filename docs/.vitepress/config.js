@@ -1,7 +1,6 @@
 module.exports = {
   title: 'nan',
   base: './',
-  dest: './dist',  // 设置输出目录
   themeConfig: {
     algolia: {
       apiKey: 'your_api_key',
