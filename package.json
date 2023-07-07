@@ -5,13 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "vitepress dev docs --port 8080",
-    "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:dev": "cross-env NODE_ENV=development vitepress dev docs --port 8080",
+    "docs:build": "cross-env vitepress build docs",
+    "docs:serve": "cross-env NODE_ENV=development vitepress serve docs"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "annanLv <1246359021@qq.com>",
+  "license": "MIT",
   "dependencies": {
-    "vitepress": "^1.0.0-alpha.19"
+    "@mdit-vue/shared": "^0.12.0",
+    "@docsearch/css": "^3.2.0",
+    "@types/node": "^18.13.0",
+    "@docsearch/js": "^3.2.0",
+    "cross-env": "^7.0.3",
+    "sass": "^1.58.3",
+    "vitepress": "^1.0.0-alpha.4"
   }
 }
