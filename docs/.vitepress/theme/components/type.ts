@@ -8,11 +8,11 @@ export interface INavLink {
       type?: 'info' | "tip" | 'warning' | 'danger'
     }
   title: string
-  desc: string
+  desc?: string
   link: string
 }
 
 export interface INavData {
   title: string
-  items: INavLink
+  items: INavLink[]
 }
