@@ -5,7 +5,9 @@ export const nav: DefaultTheme.Config['nav'] = [
   { text: '前端系列',
     items: [
       // { text: 'typescript', link: '' },
-      { text: 'vue', link: '/vue/1vue/1vue入门', activeMatch: '^/vue' }
+      { text: 'vue', link: '/vue/1vue/1vue入门', activeMatch: '^/vue' },
+      { text: '浏览器', link: '/browser/事件.md', activeMatch: '^/browser' },
+      { text: '知识点', link: '/interview/总结.md', activeMatch: '^/interview' },
     ]
   }
 ]

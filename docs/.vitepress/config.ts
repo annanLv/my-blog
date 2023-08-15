@@ -33,7 +33,9 @@ export default defineConfig({
     lastUpdatedText: '上次更新',
     sidebar: {
       ...getSideBarList('vue'),
-      ...getSideBarList('blog')
+      ...getSideBarList('blog'),
+      ...getSideBarList('browser'),
+      ...getSideBarList('interview'),
     },
     footer: {
       message: '如有转载或 CV 的请标注本站原文地址',
