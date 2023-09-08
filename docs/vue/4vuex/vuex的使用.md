@@ -1,6 +1,6 @@
 # Vuex 的基本使用
 ## 安装 vuex 依赖包
-```js
+```bash
  npm install vuex --save
 ```
 ## 导入 vuex 包
