@@ -119,8 +119,34 @@ var readyState = WebSocket.readyState
 
 :::
 
+### url
+
+> `WebSocket.url` 是一个只读属性, 返回值为当构造函数 `WebSocket` 实例对象时 URL的绝对路径.
 
 
+```js
+
+var url = aWebSocket.url
+
+```
+
+::: tip 返回值
+
+A DOMString
+
+:::
+
+## 实例方法
+
+### close()
+
+> `WebSocket.close()` 方法关闭 `WebSocket` 连接或连接尝试(如果有的话). 如果连接已经关闭, 则此方法不执行任何操作.
+
+::: warning 注意
+
+关闭连接的过程始于结束握手, close() 方法在开始结束握手之前发送的消息; 即使用户代理仍然发送这些消息, 握手也只会在消息发送之后才会开始.
+
+:::
 
 
 
