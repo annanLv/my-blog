@@ -11,7 +11,7 @@ hero:
     alt: 安楠
   actions:
     - text: let's go->
-      link: /fe/es6/
+      link: /blog/H5与客户端交互
 #    - text: 前端导航
 #      link: /nav
 #      theme: alt
