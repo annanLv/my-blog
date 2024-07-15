@@ -4,8 +4,9 @@ export const nav: DefaultTheme.Config['nav'] = [
   { text: '博客', link: '/blog/H5与客户端交互', activeMatch: '^/blog/H5与客户端交互' },
   { text: '前端系列',
     items: [
-      // { text: 'typescript', link: '' },
       { text: 'vue', link: '/vue/1vue/1vue入门', activeMatch: '^/vue' },
+      { text: 'typescript', link: '/typescript/', activeMatch: '^/typescript' },
+      { text: 'uniapp', link: '/uniapp/1uni-app基础.md', activeMatch: '^/uniapp' },
       { text: '浏览器', link: '/browser/事件.md', activeMatch: '^/browser' },
       { text: '知识点', link: '/interview/总结.md', activeMatch: '^/interview' },
     ]

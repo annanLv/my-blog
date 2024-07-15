@@ -8,7 +8,8 @@ export default defineConfig({
   description: '安楠的博客',
 
   cleanUrls: true,
-  lastUpdated: true,
+  // 暂时关闭
+  lastUpdated: false,
 
   head,
 
@@ -36,6 +37,8 @@ export default defineConfig({
       ...getSideBarList('blog'),
       ...getSideBarList('browser'),
       ...getSideBarList('interview'),
+      ...getSideBarList('typescript'),
+      ...getSideBarList('uniapp')
     },
     footer: {
       message: '如有转载或 CV 的请标注本站原文地址',
