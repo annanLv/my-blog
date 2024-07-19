@@ -85,6 +85,105 @@ this.$router.push({ path: "/home/", query: { id: 1 } });
 this.$router.query.id;
 ```
 
+### 3. props传递给路由组件
+
+> 通过声明 prop 来删除对 `$route` 的直接依赖
+
+#### 通过 props: true, 将路由的 params参数映射为 props, 只能传递 param参数 (布尔模式)
+> 当 `props` 设置为 true 时, `route.params` 将被设置为组件的 props
+
+::: code-group
+
+```vue [Composition API]
+<script setup>
+defineProps({
+  id: String
+})
+</script>
+
+<template>
+   <div>
+      User {{ id }}
+   </div>
+</template>>
+```
+
+```vue [Options API]
+<script>
+export default {
+  props: {
+    id: String
+  }
+}
+</script>
+
+<template>
+   <div>
+      User {{ id }}
+   </div>
+</template>>
+```
+
+:::
+
+> 我们可以通过设置 `props: true` 来配置路由将 `id` 参数作为 prop传递给组件
+
+```js
+const routes = [
+   { path: '/user/:id', component: User, props: true }
+]
+```
+
+#### 命名视图
+> 对于有命名视图的路由, 你必须为每个命名视图定义 `props` 配置:
+
+```js
+const routes = [
+   {
+     path: '/user/:id', 
+     components: { default: User, sidebar: Sidebar },
+     props: { default: true, sidebar: false }
+   }
+]
+```
+
+#### 对象模式
+> 当 `props` 是一个对象时, 它将原样设置为 组件 props。当props是静态的时候很有用。
+
+```js
+const routes = [
+  {
+    path: '/promotion/from-newsletter',
+    component: Promotion,
+    props: { newsletterPopup: false }
+  }
+]
+```
+
+::: tip 提示
+将对象中的属性映射成props ==> 只能传递自定义的参数
+
+:::
+
+#### 函数模式
+> 创建一个返回 props 的函数, 这允许你讲参数转换为其他类型, 将静态值与基于路由的值相结合等等
+```js
+const routes = [
+   {
+     path: "/search",
+     component: SarchUser,
+     props: route => ({ query: route.query.q })
+   }
+]
+```
+URL /search?q=vue 将传递 {query: 'vue'} 作为 props 传给 SearchUser 组件。
+
+请尽可能保持 props 函数为无状态的，因为它只会在路由发生变化时起作用。如果你需要状态来定义 props，请使用包装组件，这样 vue 才可以对状态变化做出反应。
+
+::: tip 提示
+将函数返回的对象中的属性映射成props ==> 能会传递params和query参数和自定义的
+:::
+
 ## 全局前置守卫
 
 ```js
