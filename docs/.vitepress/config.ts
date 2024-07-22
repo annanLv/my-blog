@@ -38,7 +38,8 @@ export default defineConfig({
       ...getSideBarList('browser'),
       ...getSideBarList('interview'),
       ...getSideBarList('typescript'),
-      ...getSideBarList('uniapp')
+      ...getSideBarList('uniapp'),
+      ...getSideBarList("version-manage")
     },
     footer: {
       message: '如有转载或 CV 的请标注本站原文地址',

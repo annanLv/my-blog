@@ -26,15 +26,15 @@ jobs: # 任务
 
       #以下配置同步代码到gitee仓库并自动部署
       - name: Sync to Gitee
-        uses: wearerequired/git-mirror-action@master
+        uses: wearerequired/version-manage-mirror-action@master
         env:
           # 注意在 Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY
           SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }} # 仓库配置的私钥
         with:
           # 注意替换为你的 GitHub 源仓库地址
-          source-repo: git@github.com:annanLv/my-blog.git
+          source-repo: version-manage@github.com:annanLv/my-blog.version-manage
           # 注意替换为你的 Gitee 目标仓库地址
-          destination-repo: git@gitee.com:Su_NanV/my-blog.git
+          destination-repo: version-manage@gitee.com:Su_NanV/my-blog.version-manage
 
       - name: Build Gitee Pages
         uses: yanglbme/gitee-pages-action@main
