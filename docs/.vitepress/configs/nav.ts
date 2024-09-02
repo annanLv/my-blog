@@ -9,7 +9,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: 'uniapp', link: '/uniapp/1uni-app基础.md', activeMatch: '^/uniapp' },
       { text: '版本管理', link: '/version-manage/1git/1git常用命令.md', activeMatch: '^/version-manage' },
       { text: '浏览器', link: '/browser/事件.md', activeMatch: '^/browser' },
-      { text: '知识点', link: '/interview/总结.md', activeMatch: '^/interview' },
+      // { text: '知识点', link: '/interview/总结.md', activeMatch: '^/interview' },
     ]
   }
 ]

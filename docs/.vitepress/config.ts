@@ -36,7 +36,7 @@ export default defineConfig({
       ...getSideBarList('vue'),
       ...getSideBarList('blog'),
       ...getSideBarList('browser'),
-      ...getSideBarList('interview'),
+      // ...getSideBarList('interview'),
       ...getSideBarList('typescript'),
       ...getSideBarList('uniapp'),
       ...getSideBarList("version-manage")

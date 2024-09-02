@@ -11,34 +11,29 @@ document.querySelectorAll('选择器')
 ::: warning 注意：
 `querySelector` 和 `querySelectorAll` 里面的选择器需要加符号，比如：`document.querySelector('#nav')`
 :::
-
 ## 节点操作
-1. 父节点: `node.parentNode`
-2. 子节点: `parentNode.children`  
-    - 如果想要第一个子元素节点，可以使用 `parentNode.chilren[0]` 
-    - 如果想要最后一个子元素节点，可以使用 `parentNode.chilren[parentNode.chilren.length - 1]` 
+1. 父节点:node.parentNode
+2. 子节点:parentNode.children  
+    - 如果想要第一个子元素节点，可以使用 parentNode.chilren[0] 
+    - 如果想要最后一个子元素节点，可以使用 parentNode.chilren[parentNode.chilren.length - 1] 
 
-3. 创建节点: `document.createElement('tagName')`
+3. 创建节点:document.createElement('tagName')
 
-4. 添加节点: `node.appendChild(child)` 
-    - `node.appendChild()` 方法将一个节点添加到指定父节点的子节点列表末尾。类似于 CSS 里面的 after 伪元素。,这里可以简写为
-      `node.append()`
+4. 添加节点:node.appendChild(child) 
+    - node.appendChild() 方法将一个节点添加到指定父节点的子节点列表末尾。类似于 CSS 里面的 after 伪元素。,这里可以简写为node.append()
 
-5. 添加节点: `node.insertBefore(child)`
-    - `node.insertBefore()` 方法将一个节点添加到指定父节点的子节点列表前面。类似于 CSS 里面的 before 伪元素。
+5. 添加节点:node.insertBefore(child)
+    - node.insertBefore() 方法将一个节点添加到指定父节点的子节点列表前面。类似于 CSS 里面的 before 伪元素。
 
-6. 删除节点: `node.removeChild(child)` 
-    - `node.removeChild()` 方法从 DOM 中删除一个子节点，返回删除的节点。
+6. 删除节点:node.removeChild(child) 
+    - node.removeChild() 方法从 DOM 中删除一个子节点，返回删除的节点。
 
-7. 复制节点: `node.cloneNode()`
-
+7. 复制节点:node.cloneNode()
     ::: tip 提示：
         如果括号参数为空或者为 false ，则是浅拷贝，即只克隆复制节点本身，不克隆里面的子节点
         如果括号参数为 true ，则是深度拷贝，会复制节点本身以及里面所有的子节点。
     :::
-
-
-8. 替换节点: `parentNode.replaceChild(newChild, oldChild)`; 用指定的节点替换当前节点的一个子节点，并返回被替换掉的节点。
+8. 替换节点:parentNode.replaceChild(newChild, oldChild); 用指定的节点替换当前节点的一个子节点，并返回被替换掉的节点。
 
 ## 鼠标事件对象
 | 鼠标事件对象       | 说明       | 
@@ -56,7 +51,6 @@ document.querySelectorAll('选择器')
 | onkeyup     | 某个键盘按键被松开时触发 |
 | onkeydown      | 某个键盘按键被按下时触发      |
 | onkeypress | 某个键盘按键被按下时并弹起时触发      |
-
 ::: danger 注意：
 onkeypress和前面2个的区别是，它不识别功能键，比如左右箭头，shift等
 :::
