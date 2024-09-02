@@ -3,7 +3,7 @@ import { head, nav, algolia } from "./configs";
 import { getSideBarList } from "../util";
 
 export default defineConfig({
-  title: "an nan's blog",
+  title: "安楠's blog",
   base: "/my-blog/",
   description: '安楠的博客',
 
